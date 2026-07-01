@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Prototypes and Demos · Risant Health · Shared collaboration hub</title>
+<meta name="robots" content="noindex,nofollow" />
+<style>
+  :root {
+    --brand-primary: #0D1C3D;
+    --brand-accent: #0D1C3D;
+    --brand-gray: #F6B350;
+    --text: #1a1a1a;
+    --muted: #6b7280;
+    --bg: #ffffff;
+    --card-bg: #f5f5f5;
+    --border: #e2e2e2;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    color: var(--text); background: var(--bg); line-height: 1.55; }
+  header.topbar {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px; padding: 20px 48px; border-bottom: 1px solid var(--border);
+  }
+  header.topbar .logos { display: flex; align-items: center; gap: 20px; }
+  header.topbar img { height: 32px; width: auto; }
+  header.topbar .divider { width: 1px; height: 28px; background: var(--border); }
+  header.topbar .brandline { font-size: 13px; color: var(--muted); letter-spacing: 0.02em; }
+  .breadcrumb { padding: 24px 48px 0; max-width: 1200px; margin: 0 auto; font-size: 14px; }
+  .breadcrumb a { color: var(--brand-primary); text-decoration: none; font-weight: 500; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .hero { padding: 24px 48px 32px; max-width: 1200px; margin: 0 auto; }
+  .hero .eyebrow { font-size: 13px; font-weight: 600; color: var(--brand-primary);
+    text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; }
+  .hero h1 { font-size: 42px; line-height: 1.15; margin: 0 0 16px; color: var(--brand-accent); }
+  .hero p.lede { font-size: 17px; color: var(--muted); max-width: 760px; margin: 0; }
+  section.grid { padding: 24px 48px 96px; max-width: 1200px; margin: 0 auto; }
+  .video-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+    gap: 28px;
+  }
+  .video-card {
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 14px; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .video-card video {
+    width: 100%; height: auto; display: block; background: #000;
+    aspect-ratio: 16 / 9; object-fit: contain;
+  }
+  .video-card .meta { padding: 20px 22px 22px; }
+  .video-card .tag {
+    display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 0.06em;
+    text-transform: uppercase; padding: 3px 8px; border-radius: 4px;
+    background: var(--brand-primary); color: #fff; margin-bottom: 10px;
+  }
+  .video-card h3 { margin: 0 0 8px; font-size: 19px; color: var(--brand-accent); }
+  .video-card p { margin: 0; color: var(--muted); font-size: 14px; }
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 24px 48px; color: var(--muted); font-size: 13px; text-align: center;
+  }
+  @media (max-width: 640px) {
+    header.topbar, .breadcrumb, .hero, section.grid, footer {
+      padding-left: 20px; padding-right: 20px;
+    }
+    .hero h1 { font-size: 30px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logos">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" />
+    <div class="divider"></div>
+    <img src="assets/risant-logo.svg" alt="Risant Health" style="filter:brightness(0);height:38px" />
+  </div>
+  <div class="brandline">Microsoft × Risant Health</div>
+</header>
+
+<div class="breadcrumb"><a href="index.html">← Back to Shared collaboration hub</a></div>
+
+<div class="hero">
+  <div class="eyebrow">Risant Health</div>
+  <h1>Prototypes and Demos</h1>
+  <p class="lede">Short walkthroughs of Microsoft Copilot embedded directly inside Salesforce — surrounding the existing CRM with agentic work capabilities across Sales and Service for Risant Health member systems, without ripping and replacing.</p>
+</div>
+
+<section class="grid">
+  <div class="video-grid">
+
+    <div class="video-card">
+      <video controls preload="metadata" playsinline
+             poster=""
+             src="assets/demo-copilot-salesforce-sales.mp4">
+        Your browser does not support HTML5 video. <a href="assets/demo-copilot-salesforce-sales.mp4">Download the video.</a>
+      </video>
+      <div class="meta">
+        <span class="tag">Sales</span>
+        <h3>Copilot for Salesforce — Sales</h3>
+        <p>Copilot works inside a Salesforce Sales Cloud opportunity — surfacing next-best actions, drafting outreach, and grounding recommendations in the record without leaving the flow.</p>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <video controls preload="metadata" playsinline
+             poster=""
+             src="assets/demo-copilot-salesforce-service.mp4">
+        Your browser does not support HTML5 video. <a href="assets/demo-copilot-salesforce-service.mp4">Download the video.</a>
+      </video>
+      <div class="meta">
+        <span class="tag">Service</span>
+        <h3>Copilot for Salesforce — Service</h3>
+        <p>Copilot works inside a Salesforce Service Cloud case — summarizing patient context, suggesting resolutions, and drafting responses so agents spend more time solving and less time searching.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 Microsoft · Shared with Risant Health · Not for redistribution
+</footer>
+
+</body>
+</html>
